@@ -1,15 +1,24 @@
-CREATE DATABASE IF NOT EXISTS orcamento_pessoal;
+create database if not exists orcamentopessoal;
 
-USE orcamento_pessoal;
-CREATE TABLE IF NOT EXISTS usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL,
+use orcamentopessoal;
+
+create table if not exists orcamento (
+	id int not null auto_increment,
+    cadastrar varchar(50) not null,
+	primary key (id)
+); 
+
+create database if not exists orcamentopessoal;
+
+use orcamentopessoal;
+
+create table if not exists usuario(
+	pessoa_id int auto_increment primary key,
+	nome varchar(100) 
+,	email varchar(100) 
+,	senha varchar(100) 
 );
 
-INSERT INTO usuarios (nome, email, senha) VALUES ('João da Silva', 'joao@example.com', 'senha123');
-INSERT INTO usuarios (nome, email, senha) VALUES ('Maria Oliveira', 'maria@example.com', 'senha456');
-INSERT INTO usuarios (nome, email, senha) VALUES ('Carlos Santos', 'carlos@example.com', 'senha789');
-INSERT INTO usuarios (nome, email, senha) VALUES ('Ana Lima', 'ana@example.com', 'senha987');
-
+insert into usuario (nome, email, senha) values ('João da Silva', 'joaodasilva@example.com', 'joao1234');
+insert into usuario (nome, email, senha) values ('Ana de Lima', 'anadelima@example.com', 'ana098765');
+insert into usuario (nome, email, senha) values ('Maria Júlia', 'mariajulia@example.com', 'maria@!#');
