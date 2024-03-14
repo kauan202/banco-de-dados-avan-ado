@@ -2,16 +2,6 @@ create database if not exists orcamentopessoal;
 
 use orcamentopessoal;
 
-create table if not exists orcamento (
-	id int not null auto_increment,
-    cadastrar varchar(50) not null,
-	primary key (id)
-); 
-
-create database if not exists orcamentopessoal;
-
-use orcamentopessoal;
-
 create table if not exists usuario(
 	pessoa_id int auto_increment primary key,
 	nome varchar(100) 
